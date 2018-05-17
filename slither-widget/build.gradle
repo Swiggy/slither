@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
@@ -28,9 +30,17 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.facebook.shimmer:shimmer:0.2.0@aar'
+
     implementation 'com.facebook.litho:litho-widget:0.14.0'
+    implementation 'com.facebook.litho:litho-core:0.14.0'
+    compileOnly 'com.facebook.litho:litho-annotations:0.14.0'
+    kapt 'com.facebook.litho:litho-processor:0.14.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
