@@ -1,14 +1,12 @@
 package com.abhilashmishra.slither
 
-import android.graphics.Typeface.BOLD
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.abhilashmishra.slither.widget.Slither
 import com.facebook.litho.ComponentContext
 import com.facebook.litho.LithoView
-import com.facebook.litho.widget.Text
+import com.facebook.litho.widget.Image
 import com.facebook.shimmer.Shimmer
-import com.facebook.yoga.YogaAlign
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -24,27 +22,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun createLithoView() {
         val componentContext = ComponentContext(this)
-        val component =
-                Slither.create(componentContext)
-                        .heightDip(200f)
-                        .widthDip(200f)
-                        .component(
-                                Text.create(componentContext)
-                                        .alignSelf(YogaAlign.CENTER)
-                                        .text("Slither Text")
-                                        .textStyle(BOLD)
-                                        .textSizeSp(20f)
-                        )
-                        .shimmer(
-                                Shimmer
-                                        .AlphaHighlightBuilder()
-                                        .setBaseAlpha(0.4f)
-                                        .setDropoff(0.5f)
-                                        .setTilt(0f)
-                                        .setDuration(2000).build())
-                        .build()
 
-        val lithoView = LithoView.create(componentContext, component)
+        val newComponent =
+            Slither.create(componentContext)
+                .component(
+                    Image.create(componentContext)
+                        .drawableRes(R.drawable.slither_logo)
+                        .build()
+                )
+                .shimmer(
+                    Shimmer
+                        .AlphaHighlightBuilder()
+                        .setBaseAlpha(0.4f)
+                        .setClipToChildren(true)
+                        .setDropoff(0.8f)
+                        .setTilt(15f)
+                        .setDuration(2000).build()
+                ).build()
+
+        val lithoView = LithoView.create(componentContext, newComponent)
         root.addView(lithoView)
     }
 }

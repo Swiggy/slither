@@ -1,7 +1,8 @@
 package com.abhilashmishra.slither.widget;
 
-import android.graphics.Color;
+import android.content.Context;
 
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
 import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.Size;
@@ -11,8 +12,6 @@ import com.facebook.litho.annotations.OnMeasure;
 import com.facebook.litho.annotations.OnMount;
 import com.facebook.litho.annotations.OnUnmount;
 import com.facebook.litho.annotations.Prop;
-import com.facebook.litho.utils.MeasureUtils;
-import com.facebook.shimmer.Shimmer;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 @MountSpec
@@ -20,30 +19,29 @@ class ShimmerTopComponentSpec {
 
     @OnMeasure
     static void onMeasure(
-            ComponentContext c, ComponentLayout layout, int widthSpec, int heightSpec, Size size) {
-        MeasureUtils.measureWithEqualDimens(widthSpec, heightSpec, size);
+        ComponentContext c,
+        ComponentLayout layout,
+        int widthSpec,
+        int heightSpec,
+        Size size,
+        @Prop Component component) {
+        component.measure(c, widthSpec, heightSpec, size);
     }
 
     @OnCreateMountContent
-    static ShimmerFrameLayout onCreateMountContent(ComponentContext c) {
-        ShimmerFrameLayout plainShimmerLayout = new ShimmerFrameLayout(c.getBaseContext());
-        plainShimmerLayout.setBackgroundColor(Color.parseColor("#ffffff"));
+    static ShimmerFrameLayout onCreateMountContent(Context c) {
+        ShimmerFrameLayout plainShimmerLayout = new ShimmerFrameLayout(c);
         return plainShimmerLayout;
 
     }
 
     @OnMount
-    static void onMount(
-            ComponentContext context,
-            ShimmerFrameLayout shimmerLayout,
-            @Prop Shimmer shimmer) {
-        shimmerLayout.setShimmer(shimmer).startShimmer();
+    static void onMount(ComponentContext context, ShimmerFrameLayout shimmerLayout, @Prop ShimmerLayoutBinder binder) {
+        binder.mount(shimmerLayout);
     }
 
     @OnUnmount
-    static void onUnmount(
-            ComponentContext context,
-            ShimmerFrameLayout shimmerLayout) {
-        shimmerLayout.stopShimmer();
+    static void onUnmount(ComponentContext context, ShimmerFrameLayout shimmerLayout, @Prop ShimmerLayoutBinder binder) {
+        binder.unmount(shimmerLayout);
     }
 }
