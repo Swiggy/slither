@@ -1,4 +1,7 @@
- <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
+[![](https://jitpack.io/v/com.abhilashmishra/slither.svg)](https://jitpack.io/#com.abhilashmishra/slither)
+
+
+<img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
 
 # Slither
 
