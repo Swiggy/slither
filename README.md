@@ -1,4 +1,7 @@
- <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
+[![](https://jitpack.io/v/com.abhilashmishra/slither.svg)](https://jitpack.io/#com.abhilashmishra/slither)
+
+
+<img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
 
 # Slither
 
@@ -12,10 +15,21 @@ You should have some experience with facebook litho and facebook shimmer librari
 
 ### Installing
 
-Add following line to your .gradle file
+Add following line to you project's root .gradle file
 
 ```
-implementation 'com.abhilashmishra.slither:slither:1.0.0'
+allprojects {
+    repositories {
+        //other repositories
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Add following line to your module(usually app) .gradle file
+
+```
+implementation 'com.abhilashmishra:slither:1.0.0'
 ```
 Note: I am assuming that you are already working with litho ;)
 
