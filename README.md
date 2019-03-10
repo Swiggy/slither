@@ -19,11 +19,11 @@ Add following line to you project's root .gradle file
 
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    repositories {
+        //other repositories
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 Add following line to your module(usually app) .gradle file
