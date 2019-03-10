@@ -37,6 +37,5 @@ dependencies {
     compileOnly 'com.facebook.litho:litho-annotations:0.20.0'
     kapt 'com.facebook.litho:litho-processor:0.20.0'
     implementation 'com.facebook.soloader:soloader:0.6.0'
-
-    implementation project(path: ':slither')
+    implementation 'com.abhilashmishra:slither:1.0.0'
 }
