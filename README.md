@@ -15,10 +15,21 @@ You should have some experience with facebook litho and facebook shimmer librari
 
 ### Installing
 
-Add following line to your .gradle file
+Add following line to you project's root .gradle file
 
 ```
-implementation 'com.abhilashmishra.slither:slither:1.0.0'
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+Add following line to your module(usually app) .gradle file
+
+```
+implementation 'com.abhilashmishra:slither:1.0.0'
 ```
 Note: I am assuming that you are already working with litho ;)
 
