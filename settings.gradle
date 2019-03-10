@@ -1,1 +1,1 @@
-include ':app', ':slither-widget'
+include ':app', ':slither'
