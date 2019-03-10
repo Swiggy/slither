@@ -1,3 +1,5 @@
+ <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
+
 # Slither
 
 A widget that helps you put facebook-shimmer in litho widgets 
@@ -36,6 +38,8 @@ Slither.create(componentContext)
                         .setDuration(2000).build()
                 ).build()
 ```
+
+ <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/example1.gif" alt="Example" title="example" align="center"/>
 
 Check links for facebook shimmer below to know about more shimmer modifications
 
