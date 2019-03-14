@@ -1,4 +1,5 @@
 [![](https://jitpack.io/v/com.abhilashmishra/slither.svg)](https://jitpack.io/#com.abhilashmishra/slither)
+[![Build Status](https://travis-ci.org/mishrabhilash/slither.svg?branch=master)](https://travis-ci.org/mishrabhilash/slither)
 
 
 <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
