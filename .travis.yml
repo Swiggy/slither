@@ -11,4 +11,7 @@ android:
     - android-sdk-license-.+
 
 before_install:
-        - yes | sdkmanager "platforms;android-28"
+    - yes | sdkmanager "platforms;android-28"
+
+script:
+    - ./gradlew assembleRelease --stacktrace
