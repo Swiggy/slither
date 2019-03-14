@@ -29,7 +29,7 @@ allprojects {
 Add following line to your module(usually app) .gradle file
 
 ```
-implementation 'com.abhilashmishra:slither:1.0.0'
+implementation 'com.abhilashmishra:slither:1.0.1'
 ```
 Note: I am assuming that you are already working with litho ;)
 
