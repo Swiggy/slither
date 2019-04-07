@@ -1,4 +1,4 @@
-package com.abhilash.slithersample
+package com.swiggy.slithersample
 
 import android.app.Application
 import com.facebook.soloader.SoLoader

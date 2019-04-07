@@ -1,4 +1,4 @@
-package com.abhilash.slither;
+package com.swiggy.slither;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.abhilash.slither;
+package com.swiggy.slither;
 
 import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;

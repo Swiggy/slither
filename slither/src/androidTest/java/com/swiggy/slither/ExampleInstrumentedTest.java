@@ -1,4 +1,4 @@
-package com.abhilash.slither;
+package com.swiggy.slither;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.abhilash.slither.test", appContext.getPackageName());
+        assertEquals("com.swiggy.slither.test", appContext.getPackageName());
     }
 }

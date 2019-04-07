@@ -1,4 +1,4 @@
-package com.abhilash.slither;
+package com.swiggy.slither;
 
 import org.junit.Test;
 

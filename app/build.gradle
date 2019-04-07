@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.abhilash.slithersample"
+        applicationId "com.swiggy.slithersample"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -23,6 +23,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':slither')
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.1'
@@ -37,5 +38,4 @@ dependencies {
     compileOnly 'com.facebook.litho:litho-annotations:0.24.0'
     kapt 'com.facebook.litho:litho-processor:0.24.0'
     implementation 'com.facebook.soloader:soloader:0.6.0'
-    implementation 'com.github.swiggy:slither:1.0.1'
 }

@@ -1,12 +1,12 @@
-package com.abhilash.slithersample
+package com.swiggy.slithersample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.abhilash.slither.Slither
 import com.facebook.litho.ComponentContext
 import com.facebook.litho.LithoView
 import com.facebook.litho.widget.Image
 import com.facebook.shimmer.Shimmer
+import com.swiggy.slither.Slither
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.abhilash.slithersample
+package com.swiggy.slithersample
 
 import org.junit.Test
 
