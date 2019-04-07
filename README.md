@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/com.abhilashmishra/slither.svg)](https://jitpack.io/#com.abhilashmishra/slither)
+[![](https://jitpack.io/v/swiggy/slither.svg)](https://jitpack.io/#swiggy/slither)
 [![Build Status](https://travis-ci.org/mishrabhilash/slither.svg?branch=master)](https://travis-ci.org/mishrabhilash/slither)
 
 
