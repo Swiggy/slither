@@ -41,10 +41,10 @@ dependencies {
 
     implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
 
-    implementation 'com.facebook.litho:litho-widget:0.24.0'
-    implementation 'com.facebook.litho:litho-core:0.24.0'
-    compileOnly 'com.facebook.litho:litho-annotations:0.24.0'
-    kapt 'com.facebook.litho:litho-processor:0.24.0'
+    implementation 'com.facebook.litho:litho-widget:0.25.0'
+    implementation 'com.facebook.litho:litho-core:0.25.0'
+    compileOnly 'com.facebook.litho:litho-annotations:0.25.0'
+    kapt 'com.facebook.litho:litho-processor:0.25.0'
 }
 repositories {
     mavenCentral()
