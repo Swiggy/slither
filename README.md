@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/mishrabhilash/slither.svg?branch=master)](https://travis-ci.org/mishrabhilash/slither)
 
 
-<img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
+<img src="../media/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
 
 # Slither
 
@@ -54,7 +54,7 @@ Slither.create(componentContext)
                 ).build()
 ```
 
- <img src="https://raw.githubusercontent.com/mishrabhilash/slither/master/example1.gif" alt="Example" title="example" align="center"/>
+ <img src="../media/example1.gif" alt="Example" title="example" align="center"/>
 
 Check links for facebook shimmer below to know about more shimmer modifications
 
