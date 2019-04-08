@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/swiggy/slither.svg)](https://jitpack.io/#swiggy/slither)
-[![Build Status](https://travis-ci.org/mishrabhilash/slither.svg?branch=master)](https://travis-ci.org/mishrabhilash/slither)
+[![Build Status](https://travis-ci.org/Swiggy/slither.svg?branch=master)](https://travis-ci.org/Swiggy/slither)
 
 
 <img src="./media/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
