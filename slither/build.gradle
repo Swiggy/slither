@@ -54,12 +54,12 @@ dependencies {
     androidxImplementation 'com.facebook.litho:litho-widget:0.25.0'
     androidxImplementation 'com.facebook.litho:litho-core:0.25.0'
     androidxCompileOnly 'com.facebook.litho:litho-annotations:0.25.0'
-    kapt 'com.facebook.litho:litho-processor:0.25.0'
+    kaptAndroidx 'com.facebook.litho:litho-processor:0.25.0'
 
     android28Implementation 'com.facebook.litho:litho-widget:0.21.0'
     android28Implementation 'com.facebook.litho:litho-core:0.21.0'
     android28CompileOnly 'com.facebook.litho:litho-annotations:0.21.0'
-    kapt 'com.facebook.litho:litho-processor:0.21.0'
+    kaptAndroid28 'com.facebook.litho:litho-processor:0.21.0'
 }
 repositories {
     mavenCentral()
