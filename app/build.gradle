@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        missingDimensionStrategy 'androidLibraryVersion', 'androidx'
     }
     buildTypes {
         release {
@@ -33,9 +34,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
     implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
-    implementation 'com.facebook.litho:litho-widget:0.24.0'
-    implementation 'com.facebook.litho:litho-core:0.24.0'
-    compileOnly 'com.facebook.litho:litho-annotations:0.24.0'
-    kapt 'com.facebook.litho:litho-processor:0.24.0'
+    implementation 'com.facebook.litho:litho-widget:0.25.0'
+    implementation 'com.facebook.litho:litho-core:0.25.0'
+    compileOnly 'com.facebook.litho:litho-annotations:0.25.0'
+    kapt 'com.facebook.litho:litho-processor:0.25.0'
     implementation 'com.facebook.soloader:soloader:0.6.0'
 }
