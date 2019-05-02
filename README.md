@@ -30,8 +30,15 @@ allprojects {
 Add following line to your module(usually app) .gradle file
 
 ```
-implementation 'com.github.swiggy:slither:1.0.2'
+implementation 'com.github.swiggy:slither:1.0.3'
 ```
+
+If you are using support library before androidx you can use following instead
+
+```
+implementation 'com.github.swiggy:slither:1.0.3:android28@aar'
+```
+
 Note: I am assuming that you are already working with litho ;)
 
 How to use the widget
