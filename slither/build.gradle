@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.swiggy'
+group = 'com.github.swiggy'
 
 android {
     compileSdkVersion 28
@@ -18,6 +18,17 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+    }
+
+    defaultPublishConfig "androidxRelease"
+    flavorDimensions "androidLibraryVersion"
+    productFlavors {
+        androidx {
+            dimension "androidLibraryVersion"
+        }
+        android28 {
+            dimension "androidLibraryVersion"
+        }
     }
 
     buildTypes {
@@ -36,16 +47,38 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    implementation 'androidx.core:core-ktx:1.0.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
 
-    implementation 'com.facebook.litho:litho-widget:0.25.0'
-    implementation 'com.facebook.litho:litho-core:0.25.0'
-    compileOnly 'com.facebook.litho:litho-annotations:0.25.0'
-    kapt 'com.facebook.litho:litho-processor:0.25.0'
+
+    androidxImplementation 'com.facebook.litho:litho-widget:0.25.0'
+    androidxImplementation 'com.facebook.litho:litho-core:0.25.0'
+    androidxCompileOnly 'com.facebook.litho:litho-annotations:0.25.0'
+    kaptAndroidx 'com.facebook.litho:litho-processor:0.25.0'
+
+    android28Implementation 'com.facebook.litho:litho-widget:0.21.0'
+    android28Implementation 'com.facebook.litho:litho-core:0.21.0'
+    android28CompileOnly 'com.facebook.litho:litho-annotations:0.21.0'
+    kaptAndroid28 'com.facebook.litho:litho-processor:0.21.0'
 }
 repositories {
     mavenCentral()
+}
+
+if (android.productFlavors.size() > 0) {
+    android.libraryVariants.all { variant ->
+        if (variant.name.toLowerCase().contains("debug")) {
+            return
+        }
+
+        def bundleTask = tasks["bundle${variant.name.capitalize()}Aar"]
+
+        artifacts {
+            archives(bundleTask.archivePath) {
+                classifier variant.flavorName
+                builtBy bundleTask
+                name = project.name
+            }
+        }
+    }
 }

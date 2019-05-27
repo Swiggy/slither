@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/swiggy/slither.svg)](https://jitpack.io/#swiggy/slither)
-[![Build Status](https://travis-ci.org/mishrabhilash/slither.svg?branch=master)](https://travis-ci.org/mishrabhilash/slither)
+[![Build Status](https://travis-ci.org/Swiggy/slither.svg?branch=master)](https://travis-ci.org/Swiggy/slither)
 
 
 <img src="./media/slither_logo_text.png" alt="Slither logo" title="slither" align="right" height="60" />
@@ -30,8 +30,15 @@ allprojects {
 Add following line to your module(usually app) .gradle file
 
 ```
-implementation 'com.github.swiggy:slither:1.0.1'
+implementation 'com.github.swiggy:slither:1.0.3'
 ```
+
+If you are using support library before androidx you can use following instead
+
+```
+implementation 'com.github.swiggy:slither:1.0.3:android28@aar'
+```
+
 Note: I am assuming that you are already working with litho ;)
 
 How to use the widget
